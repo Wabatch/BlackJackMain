@@ -24,11 +24,14 @@ public class BlackJack {
 
             bet = scanner.nextInt();
 
+            System.out.println("dupa");
             if(players.get(1).bet(bet) !=0) {
 
                 Game game = new Game(players);
                 game.giveCards();
 
+
+                System.out.println("karty rozdane");
                 System.out.println();
 
                 try {
@@ -41,6 +44,12 @@ public class BlackJack {
             }
             for (Player player : players) {
                 player.playerCards.clear();
+            }
+
+            for (Player player : players) {
+                for (Cards card : player.getPlayerCards()) {
+                    card.setIsUsed(false);
+                }
             }
 
         }

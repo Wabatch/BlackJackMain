@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1864b87-528f-419f-9bfa-b9698b8fe39d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/BlackJack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/Cards.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/Croupier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/StreamsExample.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

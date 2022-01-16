@@ -45,9 +45,14 @@ public class Game {
 
             System.out.println();
         }
+        while (players.get(0).countPlayersCardsValue() < 17)
+            players.get(0).addCard(card.randomCard());
+
+        System.out.println("dobralo karte dla krupiera");
 
         //wyswietla karty po dobraniu
         cardsDispaly();
+
         players.get(1).setEnoughCards(false);
 
         if(players.get(1).countPlayersCardsValue() < 22)
@@ -94,7 +99,10 @@ public class Game {
 
     //sprawdza kto wygral
     public int  whoWins(){
-        if(players.get(0).countPlayersCardsValue() > players.get(1).countPlayersCardsValue()){
+        if(players.get(0).countPlayersCardsValue() > 21){
+            System.out.println("You won!");
+            yourBet *= 2;
+        } else if(players.get(0).countPlayersCardsValue() > players.get(1).countPlayersCardsValue()){
             System.out.println("You lost");
             yourBet = 0;
         } else if(players.get(0).countPlayersCardsValue() < players.get(1).countPlayersCardsValue()) {
