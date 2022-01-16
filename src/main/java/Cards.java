@@ -126,11 +126,17 @@ public class Cards {
 
     }
 
-    //losuje karte
+    //losuje karte, zwraca karte tylko jesli nie jest juz wykorzystana
     public Cards randomCard(){
+
         Random random = new Random();
         int tmp = random.nextInt(52) + 1;
+
+        while(getCardObjectByIndex(tmp).isUsed){
+            tmp = random.nextInt(52) + 1;
+        }
         Cards card = getCardObjectByIndex(tmp);
+
         return card;
     }
 }

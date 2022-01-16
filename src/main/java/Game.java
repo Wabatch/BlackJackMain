@@ -15,19 +15,18 @@ public class Game {
     //rozdaje karty graczom
     public void giveCards(){
         for (Player tmpPlayer : players) {
-            while(tmpPlayer.getPlayerCards().size() != 2){
-                Cards tmpCards = card.randomCard();
-                if(tmpCards.getIsUsed() == false){
-                    tmpPlayer.addCard(tmpCards);
-                    tmpCards.setIsUsed(true);
-                }
 
+            while(tmpPlayer.getPlayerCards().size() != 2){
+
+                Cards tmpCards = card.randomCard();
+                tmpPlayer.addCard(tmpCards);
             }
 
         }
         // card.showAllDeck();
-
     }
+
+    //rozgrywaka
     public int playARound(int yourBet) throws InterruptedException {
 
         this.yourBet = yourBet;
@@ -46,9 +45,13 @@ public class Game {
             System.out.println();
         }
 
-        //wyswietla karty po dobraniu
-        cardsDispaly();
         players.get(1).setEnoughCards(false);
+
+        while(players.get(0).countPlayersCardsValue() < 17){
+            cardsDispaly();
+            players.get(0).addCard(card.randomCard());
+        }
+        cardsDispaly();
 
         if(players.get(1).countPlayersCardsValue() < 22)
             return whoWins();
@@ -59,6 +62,7 @@ public class Game {
 
     }
 
+    //pozwala graczowi na dobieranie kart
     public void takeCards(){
 
         Scanner scanner = new Scanner(System.in);
@@ -94,7 +98,10 @@ public class Game {
 
     //sprawdza kto wygral
     public int  whoWins(){
-        if(players.get(0).countPlayersCardsValue() > players.get(1).countPlayersCardsValue()){
+        if(players.get(0).countPlayersCardsValue() > 21){
+            System.out.println("You won!");
+            yourBet *= 2;
+        } else if(players.get(0).countPlayersCardsValue() > players.get(1).countPlayersCardsValue()){
             System.out.println("You lost");
             yourBet = 0;
         } else if(players.get(0).countPlayersCardsValue() < players.get(1).countPlayersCardsValue()) {
