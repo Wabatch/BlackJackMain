@@ -24,14 +24,11 @@ public class BlackJack {
 
             bet = scanner.nextInt();
 
-            System.out.println("dupa");
             if(players.get(1).bet(bet) !=0) {
 
                 Game game = new Game(players);
                 game.giveCards();
 
-
-                System.out.println("karty rozdane");
                 System.out.println();
 
                 try {

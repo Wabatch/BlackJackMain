@@ -44,17 +44,8 @@ public class Game {
 
             System.out.println();
         }
-        while (players.get(0).countPlayersCardsValue() < 17)
-            players.get(0).addCard(card.randomCard());
 
-        System.out.println("dobralo karte dla krupiera");
 
-<<<<<<< HEAD
-        //wyswietla karty po dobraniu
-        cardsDispaly();
-
-=======
->>>>>>> tmp
         players.get(1).setEnoughCards(false);
 
         while(players.get(0).countPlayersCardsValue() < 17){
